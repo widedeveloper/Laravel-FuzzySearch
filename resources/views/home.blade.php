@@ -50,8 +50,8 @@
             <h3 class="panel-title">Search Process</h3>
             </div>
             <div class="panel-body">
-            <form action="{{route('import')}}" method="POST" enctype="multipart/form-data">
-            {{-- <form action="{{url('search')}}" method="POST" enctype="multipart/form-data"> --}}
+            {{-- <form action="{{route('import')}}" method="POST" enctype="multipart/form-data"> --}}
+            <form action="{{url('search')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="advance-search">
                     <div class="row">

@@ -15,8 +15,10 @@
 <table id="resulttable" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
  <thead>
   <tr>
-  @foreach ($conditionHeaders as $item)
-    <th>{{ $item }}</th>
+  @foreach ($conditionHeaders as $key=>$item)
+    @if (in_array($key, $search_row))
+      <th>{{ $item }}</th>
+    @endif
   @endforeach
       <th></th>
   @foreach ($fieldLists as $item)
@@ -30,8 +32,11 @@
    @endphp
  @foreach($search_result as $row)
   <tr>
-    @foreach ($conditionContents[$i] as $value)
-    <td>{{ $value }}</td>      
+    @foreach ($conditionContents[$i] as $key=>$value)
+      @if (in_array($key, $search_row))
+        <td>{{ $value }}</td>
+      @endif
+    
     @endforeach
     <td></td>
     @if ( empty($row) )

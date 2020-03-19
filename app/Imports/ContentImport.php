@@ -11,7 +11,7 @@ use Maatwebsite\Excel\Concerns\WithStartRow;
 class ContentImport implements ToModel, WithChunkReading, WithBatchInserts, WithStartRow
 {
     public function __construct(){
-        ini_set('max_execution_time', 99999999);
+        ini_set('max_execution_time', 9999999999999);
     }
     /**
     * @param array $row
